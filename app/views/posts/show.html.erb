@@ -10,11 +10,12 @@
   <%= @post.content %>
 </p>
 
-<% if @post.image.attached? %>
+<% if @post.images.attached? %>
   <p>
-    <strong>Content:</strong>
-    <%= image_tag @post.image %>
-    <%= @post.image.filename %>
+    <strong>Images:</strong>
+    <% @post.images.each do |image| %>
+    <%= image_tag(image) %>
+  <% end %>
   </p>
 <% end %>
 
