@@ -13,8 +13,8 @@
 <% if @post.images.attached? %>
   <p>
     <strong>Images:</strong>
-    <% @post.images.each do |image| %>
-    <%= image_tag(image) %>
+    <% (0...@post.images.count).each do |image| %>
+    <%= image_tag(@post.thumbnail(image)) %>
   <% end %>
   </p>
 <% end %>
