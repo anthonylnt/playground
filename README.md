@@ -1,24 +1,20 @@
-# README
+# Rails Playground App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A playground app for testing stuff in a Rails environment 
 
-Things you may want to cover:
+# Install
 
-* Ruby version
+```sh
+git clone git@github.com:anthonylnt/playground.git
 
-* System dependencies
+cd playground
 
-* Configuration
+bundle install
 
-* Database creation
+rails db:create db:migrate
 
-* Database initialization
+yarn install
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+hivemind to launch the server + webpack-dev-server
+```
+If you don't have hivemind, then install it with `brew install hivemind` on mac os. If you prefer, you also could use the basic `rails server` but `webpack-dev-server` won't be running then you won't have live reloading feature.
